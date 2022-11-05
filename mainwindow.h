@@ -22,6 +22,14 @@ private slots:
 
     void on_pb_modif_clicked();
 
+    void on_toolButton_6_clicked();
+
+    void on_B_tri_clicked();
+
+    void on_toolButton_5_clicked();
+
+    void on_B_rech_clicked();
+
 private:
     Ui::MainWindow *ui;
    Client C;

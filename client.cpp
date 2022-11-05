@@ -17,11 +17,10 @@ QString Client::getprenom(){return prenom;}
 void Client::setcin(int cin){this->cin=cin;}
 void Client::setnom(QString nom){this->nom=nom;}
 void Client::setprenom(QString prenom){this->prenom=prenom;}
+
 bool Client::ajouter()
 {
-
-
-    QSqlQuery query;
+   QSqlQuery query;
 
       QString cin_string=QString::number(cin);
 
@@ -35,9 +34,9 @@ bool Client::ajouter()
 
 
     return query.exec();
-
-
 }
+
+
 bool Client::supprimer(int cin)
 {
     QSqlQuery query;
@@ -49,11 +48,12 @@ bool Client::supprimer(int cin)
 
     qDebug()<<query.lastError();
 
-
     return query.exec();
 
-
 }
+
+
+
  QSqlQueryModel* Client::afficher()
  {
     QSqlQueryModel* model=new QSqlQueryModel();
@@ -80,10 +80,38 @@ bool Client::supprimer(int cin)
         query.bindValue(":nom", nom);
         query.bindValue(":prenom", prenom);
 
-        return  query.exec();
-
-
-
+         return  query.exec();
 
  }
+
+
+    QSqlQueryModel *Client::trierClient()
+    {
+        QSqlQueryModel * model=new QSqlQueryModel();
+          QString cin1=QString::number(cin);
+        model->setQuery("select * from client order by cin" );
+
+        model->setHeaderData(1,Qt::Horizontal,QObject::tr("nom"));
+
+        model->setHeaderData(2,Qt::Horizontal,QObject::tr("prenom"));
+
+        model->setHeaderData(3,Qt::Horizontal,QObject::tr("cin"));
+          return model;
+
+
+    }
+
+    void Client::rechercher(QString a,QTableView *g)
+    {
+        {
+            QSqlQuery qry;
+             QSqlQueryModel *m=new QSqlQueryModel();//initialisation
+             qry.prepare("select * from Client where NOM like '%"+a+"%' OR PRENOM like '%"+a+"%' OR CIN like '%"+a+"%'");
+                         qry.exec();
+                     m->setQuery(qry);
+             g->setModel(m);
+
+
+         }
+    }
 

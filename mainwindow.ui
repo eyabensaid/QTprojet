@@ -20,9 +20,9 @@
    <widget class="QTabWidget" name="tabWidget">
     <property name="geometry">
      <rect>
-      <x>130</x>
-      <y>20</y>
-      <width>861</width>
+      <x>90</x>
+      <y>0</y>
+      <width>901</width>
       <height>541</height>
      </rect>
     </property>
@@ -238,25 +238,12 @@ border-radius:60px;
      <attribute name="title">
       <string>Modifier/Supprimer</string>
      </attribute>
-     <widget class="QTableView" name="tableView">
-      <property name="geometry">
-       <rect>
-        <x>30</x>
-        <y>60</y>
-        <width>421</width>
-        <height>301</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background:rgb(255, 255, 255);</string>
-      </property>
-     </widget>
      <widget class="QLineEdit" name="LINE_C">
       <property name="geometry">
        <rect>
-        <x>470</x>
-        <y>80</y>
-        <width>201</width>
+        <x>60</x>
+        <y>90</y>
+        <width>431</width>
         <height>20</height>
        </rect>
       </property>
@@ -280,9 +267,9 @@ border:none;
      <widget class="QLineEdit" name="LINE_N">
       <property name="geometry">
        <rect>
-        <x>470</x>
-        <y>130</y>
-        <width>201</width>
+        <x>60</x>
+        <y>170</y>
+        <width>431</width>
         <height>21</height>
        </rect>
       </property>
@@ -306,9 +293,9 @@ border:none;
      <widget class="QLineEdit" name="LINE_P">
       <property name="geometry">
        <rect>
-        <x>470</x>
-        <y>180</y>
-        <width>201</width>
+        <x>60</x>
+        <y>260</y>
+        <width>431</width>
         <height>21</height>
        </rect>
       </property>
@@ -333,7 +320,7 @@ border:none;
       <property name="geometry">
        <rect>
         <x>620</x>
-        <y>250</y>
+        <y>190</y>
         <width>61</width>
         <height>61</height>
        </rect>
@@ -370,8 +357,8 @@ border-radius:60px;
      <widget class="QToolButton" name="pb_modif">
       <property name="geometry">
        <rect>
-        <x>460</x>
-        <y>250</y>
+        <x>610</x>
+        <y>100</y>
         <width>71</width>
         <height>61</height>
        </rect>
@@ -413,20 +400,20 @@ border-radius:60px;
      <widget class="QTableView" name="tab_client">
       <property name="geometry">
        <rect>
-        <x>110</x>
+        <x>50</x>
         <y>90</y>
-        <width>641</width>
-        <height>361</height>
+        <width>711</width>
+        <height>401</height>
        </rect>
       </property>
       <property name="styleSheet">
        <string notr="true">background:rgb(255, 255, 255);</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="lineEdit_11">
+     <widget class="QLineEdit" name="line_rech">
       <property name="geometry">
        <rect>
-        <x>170</x>
+        <x>130</x>
         <y>50</y>
         <width>481</width>
         <height>31</height>
@@ -449,10 +436,10 @@ border:none;
        <string>CIN</string>
       </property>
      </widget>
-     <widget class="QToolButton" name="toolButton_5">
+     <widget class="QToolButton" name="B_rech">
       <property name="geometry">
        <rect>
-        <x>110</x>
+        <x>60</x>
         <y>40</y>
         <width>51</width>
         <height>41</height>
@@ -487,10 +474,10 @@ border-radius:60px;
        </size>
       </property>
      </widget>
-     <widget class="QToolButton" name="toolButton_6">
+     <widget class="QToolButton" name="B_pdf">
       <property name="geometry">
        <rect>
-        <x>680</x>
+        <x>640</x>
         <y>40</y>
         <width>51</width>
         <height>41</height>
@@ -517,6 +504,44 @@ border-radius:60px;
       <property name="icon">
        <iconset resource="icons/icons.qrc">
         <normaloff>:/312551831_410074381158418_5360117734813686178_n - Copie - Copie.png</normaloff>:/312551831_410074381158418_5360117734813686178_n - Copie - Copie.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>80</width>
+        <height>80</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QToolButton" name="B_tri">
+      <property name="geometry">
+       <rect>
+        <x>700</x>
+        <y>40</y>
+        <width>41</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background:#01166B;
+border-radius:60px;
+}
+QToolButton{
+background:#01166B;
+border-radius:60px;} 
+
+QToolButton::hover{
+background:#9708B4;
+border-radius:60px;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="icon">
+       <iconset resource="icons/icons.qrc">
+        <normaloff>:/icons8-mises-à-jour-disponibles-64.png</normaloff>:/icons8-mises-à-jour-disponibles-64.png</iconset>
       </property>
       <property name="iconSize">
        <size>

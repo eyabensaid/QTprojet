@@ -2,6 +2,7 @@
 #define CLIENT_H
 #include<QString>
 #include<QSqlQueryModel>
+#include<QTableView>
 class Client
 {
 public:
@@ -15,9 +16,10 @@ public:
     void setprenom(QString);
     bool ajouter();
     QSqlQueryModel* afficher();
+    QSqlQueryModel *trierClient();
     bool supprimer(int);
     bool Modifier(int ,QString ,QString );
-
+    void rechercher(QString a,QTableView *g);
 
 private:
     int cin;
